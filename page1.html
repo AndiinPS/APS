@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- Declara o tipo de documento HTML5.-->
+
+<html lang="pt-br"> <!--O elemento raiz que envolve todo o conteúdo da página.-->
+  
+<head> <!--Contém informações sobre a página, como o título exibido na guia do navegador.-->
+  
+    <title>Título da página</title> <!--Define o título da página.-->
+  
+    <meta charset="utf-8"> <!--Para definir qual o tipo de codificação da página (uma meta informação do documento), esta deve obrigatoriamente estar marcada no cabeçalho do mesmo documento.-->
+  </head>
+  
+  <body> <!-- Contém o conteúdo visível da página.-->
+    
+    <h1>Código HTML.</h1> <!-- Cabeçalho de primeiro nível.-->
+    
+    <img src="./img/panic.jpeg" alt="panic" height="100px"> <!-- Adicionar imagens.-->
+    
+    <p>Texto.</p> <!-- Parágrafo.-->
+    
+    <a href="https://www.youtube.com/channel/UCy0NsUYq227bdxC8LPwX45Q">Um link</a> <!-- Adicionar link.-->
+    <img src="./icons/youtube.svg" alt="youtube" height="50">
+    
+    <table> <!-- Cria tabelas-->
+       
+        <tr> <!-- Cria linhas-->
+            <th>Nome</th> <!-- Cria cabeçalhos de coluna.-->
+            <th>Idade</th>
+        </tr>
+        <tr>
+            <td>Anderson Santos</td> <!--Cria células de dados.-->
+            <td>35</td>
+        </tr>
+    </table>
+
+    <form> <!--Criar formulários.-->
+       
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"> <!--Dentro do formulário, você pode incluir campos de entrada, como <input>, <textarea>, <select>, entre outros.-->
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <audio controls> <!--Use elementos como <audio> e <video> para incorporar áudio e vídeo-->
+        <source src="./audio/creep.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+    <video controls>
+        <source src="./video/drift.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+    
+</body>
+      
+  
+    
+</html>
