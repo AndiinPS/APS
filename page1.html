@@ -1,60 +1,232 @@
-<!DOCTYPE html> <!-- Declara o tipo de documento HTML5.-->
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<html lang="pt-br"> <!--O elemento raiz que envolve todo o conteúdo da página.-->
-  
-<head> <!--Contém informações sobre a página, como o título exibido na guia do navegador.-->
-  
-    <title>Título da página</title> <!--Define o título da página.-->
-  
-    <meta charset="utf-8"> <!--Para definir qual o tipo de codificação da página (uma meta informação do documento), esta deve obrigatoriamente estar marcada no cabeçalho do mesmo documento.-->
-  </head>
-  
-  <body> <!-- Contém o conteúdo visível da página.-->
-    
-    <h1>Código HTML.</h1> <!-- Cabeçalho de primeiro nível.-->
-    
-    <img src="./img/panic.jpeg" alt="panic" height="100px"> <!-- Adicionar imagens.-->
-    
-    <p>Texto.</p> <!-- Parágrafo.-->
-    
-    <a href="https://www.youtube.com/channel/UCy0NsUYq227bdxC8LPwX45Q">Um link</a> <!-- Adicionar link.-->
-    <img src="./icons/youtube.svg" alt="youtube" height="50">
-    
-    <table> <!-- Cria tabelas-->
-       
-        <tr> <!-- Cria linhas-->
-            <th>Nome</th> <!-- Cria cabeçalhos de coluna.-->
-            <th>Idade</th>
-        </tr>
-        <tr>
-            <td>Anderson Santos</td> <!--Cria células de dados.-->
-            <td>35</td>
-        </tr>
-    </table>
+<head>
+    <title>Anderson Santos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="icon" href="./icons/favicon.ico.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Montserrat", sans-serif
+        }
 
-    <form> <!--Criar formulários.-->
-       
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome"> <!--Dentro do formulário, você pode incluir campos de entrada, como <input>, <textarea>, <select>, entre outros.-->
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
+        .w3-row-padding img {
+            margin-bottom: 12px
+        }
 
-    <audio controls> <!--Use elementos como <audio> e <video> para incorporar áudio e vídeo-->
-        <source src="./audio/creep.mp3" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-    
-    <video controls>
-        <source src="./video/drift.mp4" type="video/mp4">
-        Seu navegador não suporta o elemento de vídeo.
-    </video>
-    
+        .w3-sidebar {
+            width: 120px;
+            background: #222;
+        }
+
+        #main {
+            margin-left: 120px
+        }
+
+        @media only screen and (max-width: 600px) {
+            #main {
+                margin-left: 0
+            }
+        }
+    </style>
+</head>
+
+<body class="w3-black">
+
+
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+
+        <img src="./img/logo.jpg" style="width:100%">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+        </a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p>SOBRE</p>
+        </a>
+        <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-eye w3-xxlarge"></i>
+            <p>PROJETOS</p>
+        </a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTATO</p>
+        </a>
+    </nav>
+
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+            <a href="#sobre" class="w3-bar-item w3-button" style="width:25% !important">SOBRE</a>
+            <a href="#projetos" class="w3-bar-item w3-button" style="width:25% !important">PROJETOS</a>
+            <a href="#contato" class="w3-bar-item w3-button" style="width:25% !important">CONTATO</a>
+        </div>
+    </div>
+
+
+    <div class="w3-padding-large" id="main">
+
+        <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+            <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Anderson Santos.</h1>
+            <p>Programador.</p>
+            <img src="./img/wide.jpg" alt="boy" class="w3-image" width="992" height="1108">
+        </header>
+
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h2 class="w3-text-light-grey">Anderson Santos</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <p> Olá, estou entusiasmado para embarcar em uma carreira como programador. Meu objetivo é me tornar um
+                programador fullstack e contribuir ativamente para projetos desafiadores no mundo da tecnologia.
+
+                Formação e Habilidades:
+                Atualmente, estou finalizando meu curso técnico em Qualidade, que será concluído em janeiro de 2024, e
+                estou aprendendo programação com ênfase em Python, HTML e CSS, com previsão de conclusão em novembro de
+                2023. Meus conhecimentos em informática abrangem desde o básico até o intermediário em Microsoft Windows
+                e Internet. Além disso, possuo conhecimentos básicos em softwares específicos, como CSS, HTML, Python.
+                Tenho experiência no uso do GitHub para controle de versão e colaboração em projetos de código aberto, e
+                estou familiarizado com a gestão de repositórios e a colaboração com equipes de desenvolvimento..
+
+                Motivação:
+                Minha paixão por tecnologia, jogos e programação me impulsiona a buscar oportunidades para aplicar e
+                expandir minhas habilidades. Estou ansioso para canalizar essa paixão em projetos práticos.
+
+                Projetos Pessoais:
+                Estou comprometido em meu crescimento como programador e estou trabalhando em projetos pessoais para
+                aprimorar minhas habilidades.
+
+                Mentalidade de Aprendizado Contínuo:
+                Acredito em uma mentalidade de aprendizado contínuo e estou disposto a me adaptar a novas tecnologias e
+                desafios à medida que eles surgem. Estou ansioso para aprender com equipes experientes e contribuir de
+                forma significativa em ambientes de desenvolvimento.
+
+                Conclusão:
+                Estou empolgado para começar minha jornada como programador e aplicar minha paixão, habilidades e
+                comprometimento para crescer como um profissional da área de tecnologia.
+
+                Agradeço pela vista a minha pagina e estou à disposição para discutir como posso contribuir para o
+                sucesso da minha carreira.
+
+
+            </p>
+            <h3 class="w3-padding-16 w3-text-light-grey">Minhas habilidades</h3>
+            <p class="w3-wide">Html</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:45%"></div>
+            </div>
+            <p class="w3-wide">Python</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:65%"></div>
+            </div>
+            <p class="w3-wide">Css</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:30%"></div>
+            </div><br>
+
+            <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">0</span><br>
+                    Apps
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">2</span><br>
+                    Sites
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">0</span><br>
+                    Banco de dados
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">0</span><br>
+                    Projetos concluidos
+                </div>
+            </div>
+
+
+            <div class="w3-padding-64 w3-content" id="photos">
+                <h2 class="w3-text-light-grey">Meus projetos</h2>
+                <hr style="width:200px" class="w3-opacity">
+
+
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half">
+                        <img src="./img/oficina.jpg" style="width:100%">
+                        <img src="./img/oficina1.jpg" style="width:100%">
+                        <img src="./img/oficina2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="w3-half">
+                        <img src="/w3images/underwater.jpg" style="width:100%">
+                        <img src="/w3images/chef.jpg" style="width:100%">
+                        <img src="/w3images/wedding.jpg" style="width:100%">
+                        <img src="/w3images/p6.jpg" style="width:100%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+                <h2 class="w3-text-light-grey">Contatos</h2>
+                <hr style="width:200px" class="w3-opacity">
+
+                <div class="w3-section">
+                    <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Campo Grande, RJ
+                    </p>
+                    <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+                        <a href="tel:+5521964681384" target="_blank">
+                            Phone:TEL: +55 21 96468-1384
+
+                        </a>
+                    </p>
+                    <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: @mail.com
+                    </p>
+                </div><br>
+                <p>Vamos entrar em contato. Me mande uma mensagem:</p>
+
+                <form action="/action_page.php" target="_blank">
+                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Nome"></p>
+                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Assunto" required name="Assunto">
+                    </p>
+                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Mensagem" required
+                            name="Mensagem"></p>
+                    <p>
+                        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+                            <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
+                        </button>
+                    </p>
+                </form>
+
+            </div>
+
+
+            <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa fa-instagram w3-hover-opacity"></i>
+                </a>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+
+                <p class="w3-medium">Repositórios<a href="https://github.com/AndiinPS" target="_blank"
+                        class="w3-hover-text-red">GitHub</a></p>
+
+            </footer>
+
+
+        </div>
+
 </body>
-      
-  
-    
+
 </html>
